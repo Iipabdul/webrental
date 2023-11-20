@@ -1,0 +1,80 @@
+body {
+    text-align: center;
+}
+table {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 250px;
+    margin-left: 250px;
+    background-color: rgb(8, 206, 255);
+    text-align: center;
+}
+fieldset{
+    position: relative;
+    text-align: center;
+    background-color:#e2cf22;
+    padding: 25px;
+}
+a,a:hover,a:active,a:focus {
+	display:inline-block;
+	text-decoration:none;
+	color: #5f5c5c;
+	font-size:20px;
+	padding:0;
+    text-transform: capitalize;
+}
+
+img {
+    border:none; 
+    max-width: 300px;
+    height:300px;
+}
+
+/* section-header */
+.section-header{
+    position: relative;
+    text-align: center;
+}
+.section-header h2{
+    position: relative;
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 35px;
+}
+.section-header h2:before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -42px;
+    background: #111111;
+}
+.single-model-search h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+/*model-select-icon*/
+.model-select-icon{
+    position:relative;
+}
+.model-select-icon .form-control {
+    outline: 0!important;
+    box-shadow: none;
+    border: 1px solid #8d1a1a;
+    background: #f8f8f8;
+    height: 60px;
+}
+.model-select-icon select {
+    font-size: 16px;
+    color: #1cdd25;
+    text-transform: capitalize;
+}
+.new-cars{
+    background: #d4d3d3;
+    padding:112px 0 120px;
+}

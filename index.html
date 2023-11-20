@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <title>JASA MOBIL XLINE</title>
+
+</head>
+
+<body>
+
+  <h1>WELCOME TO CAR XLINE </h1>
+  <img src="assets/images/BC.jpg" alt="img" />
+
+  <fieldset id="rentalForm">
+    <legend>PENYEWAAN</legend>
+    <label for="carType">Tersedia Pilihan Mobil:</label>
+    <select id="carType" name="carType">
+      <option value="avanza">Daihatsu Sigra </option>
+      <option value="ayla">Daihatsu Xenia</option>
+      <option value="crv">Honda Brio</option>
+    </select>
+    <label for="rentalDays">Berapa hari anda akan menyewa:</label>
+    <input type="number" id="rentalDays" name="rentalDays" /><br>
+    <br>
+    <!-- Tambah input untuk tanggal penyewaan -->
+    <label for="rentalDate">Tanggal Penyewaan:</label>
+    <input type="date" id="rentalDate" name="rentalDate" />
+
+    <button type="button" onclick="addRental()">Apakah anda sudah yakin?</button>
+  </fieldset>
+
+  <h2>Penyewaan</h2>
+  <table id="rentalList">
+    <tr>
+      <th>Mobil</th>
+      <th>Hari</th>
+      <th>Sub Total</th>
+      <th>Aksi</th>
+    </tr>
+  </table>
+
+  <br />
+  <div id="totalPayment"></div>
+
+  <br />
+  <form id="paymentForm" onsubmit="event.preventDefault(); calculateChange()">
+    <label for="amountPaid">Jumlah Bayar:</label><br />
+    <input type="number" id="amountPaid" name="amountPaid" />
+    <button type="submit">Hitung Kembalian</button>
+    <br>
+  </form>
+
+  <br />
+  <div id="change"></div>
+  <div>
+    <ul id="list-mobil"></ul>
+    <button onclick="window.print()">Print Hasil</button>
+  </div>
+
+  <script src="/assets/js/fungsi.js"></script>
+  <script src="/assets/js/register.js"></script>
+
+
+  <h4>CATATAN</h4>
+  <p>Daihatsu Sigra: Rp300,000/hari, diskon 25% jika lebih dari 3 hari</p>
+  <p>DDaihatsu Xenia: Rp400,000/hari, diskon 15% jika lebih dari 2 hari</p>
+  <p>Honda Brio: Rp500,000/hari</p>
+  <section id="new-cars" class="new-cars">
+    <div class="container">
+      <div class="section-header">
+        <p>Mobil Dan <span></span> Fitur-Fitur</p>
+        <h2>Pilihan Mobil</h2>
+      </div><!--/.section-header-->
+      <div class="new-cars-content">
+        <div class="owl-carousel owl-theme" id="new-cars-carousel">
+          <div class="new-cars-item">
+            <div class="single-new-cars-item">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="new-cars-img">
+                    <img src="assets/images/sigra.jpg" alt="img" />
+                  </div><!--/.new-cars-img-->
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <div class="new-cars-txt">
+                    <h2><a href="#">Daihatsu Sigra <span> </span></a></h2>
+                    <p>
+                      Daihatsu Sigra adalah mobil MPV (Multi-Purpose Vehicle) yang diproduksi oleh pabrikan otomotif
+                      Jepang, Daihatsu. Mobil ini dirancang untuk memberikan kenyamanan dalam penggunaan sehari-hari dan
+                      serbaguna, khususnya untuk kebutuhan keluarga dan mobilitas perkotaan.
+                    </p>
+                    <p class="new-cars-para2">
+                      Desain interior Sigra dirancang untuk memberikan fleksibilitas dalam pengaturan kursi dan
+                      memberikan ruang kargo yang cukup untuk keperluan keluarga.
+                    </p>
+                    <br>
+                    <br>
+
+                    </button>
+                  </div><!--/.new-cars-txt-->
+                </div><!--/.col-->
+              </div><!--/.row-->
+            </div><!--/.single-new-cars-item-->
+          </div><!--/.new-cars-item-->
+          <div class="new-cars-item">
+            <div class="single-new-cars-item">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="new-cars-img">
+                    <img src="assets/images/brio.jpg" alt="img" />
+                  </div><!--/.new-cars-img-->
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <div class="new-cars-txt">
+                    <h2><a href="#">Honda Brio</a></h2>
+                    <p>
+                      Honda Brio adalah model mobil hatchback yang diproduksi oleh pabrikan otomotif Jepang, Honda. Brio
+                      pertama kali diperkenalkan pada tahun 2011 dan dirancang untuk menjadi kendaraan yang ringkas,
+                      efisien, dan terjangkau. Model ini ditargetkan untuk pasar mobil kota dan penggunaan sehari-hari.
+                    </p>
+                    <p class="new-cars-para2">
+                      Meskipun ukuran yang kompak, Brio memiliki interior yang dirancang secara fungsional untuk
+                      memberikan kenyamanan kepada pengemudi dan penumpang.
+                    </p>
+                    <br>
+                    </button>
+                  </div><!--/.new-cars-txt-->
+                </div><!--/.col-->
+              </div><!--/.row-->
+            </div><!--/.single-new-cars-item-->
+          </div><!--/.new-cars-item-->
+          <div class="new-cars-item">
+            <div class="single-new-cars-item">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="new-cars-img">
+                    <img src="assets/images/xenia.jpg" alt="img" />
+                  </div><!--/.new-cars-img-->
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <div class="new-cars-txt">
+                    <h2><a href="#">Honda Xenia</a></h2>
+                    <p>
+                      Daihatsu Xenia adalah mobil MPV (Multi-Purpose Vehicle) yang diproduksi oleh pabrikan otomotif
+                      Jepang, Daihatsu. Mobil ini pertama kali diperkenalkan pada tahun 2003 dan telah menjadi salah
+                      satu mobil yang populer di segmen MPV di beberapa pasar, terutama di Indonesia.
+                    </p>
+                    <p class="new-cars-para2">
+                      Seperti kebanyakan MPV, Xenia biasanya dilengkapi dengan mesin yang efisien bahan bakar,
+                      mempertimbangkan kebutuhan perjalanan jarak jauh dan penggunaan sehari-hari.
+                    </p>
+                  </div><!--/.new-cars-txt-->
+                </div><!--/.col-->
+              </div><!--/.row-->
+            </div><!--/.single-new-cars-item-->
+          </div><!--/.new-cars-item-->
+        </div><!--/#new-cars-carousel-->
+      </div><!--/.new-cars-content-->
+    </div><!--/.container-->
+</body>
+
+</html>
